@@ -1,5 +1,7 @@
 # Ecoindex Badge
 
+[![](https://data.jsdelivr.com/v1/package/gh/cnumr/ecoindex_badge/badge)](https://www.jsdelivr.com/package/gh/cnumr/ecoindex_badge)
+
 Ce projet a pour but de proposer un badge à intégrer à vos pages web facilement. Ce badge va afficher le score Ecoindex de la page web sur laquelle il est intégré et permettra de rediriger l'utilisateur vers la page de détails du score Ecoindex.
 
 ## Comment l'intégrer ?
