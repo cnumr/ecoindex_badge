@@ -7,7 +7,9 @@
 
     a.href = `${baseUrl}/redirect/?url=${url}`; 
     a.target = "_blank";
+    a.title = "Analyse ecoindex";
     img.src = `${baseUrl}/badge/?theme=dark&url=${url}`;
+    img.alt = "Badge ecoindex";
     a.appendChild(img);
     badge.appendChild(a);
 })();
