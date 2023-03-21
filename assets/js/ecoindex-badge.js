@@ -79,8 +79,8 @@ const createStyle = (theme, color) => {
       bottom: 10px;
     }
     #ecoindex-badge #badge {
-      background-color: ${theme === `light` ? `#FFF` : `#000`};
-      color: ${theme === `light` ? `#000` : `#FFF`};
+      background-color: ${theme === `light` ? `#0F2E39` : `#EEEEEE`};
+      color: ${theme === `light` ? `#0F2E39` : `#FFF`};
       border-radius: 1em;
       padding: .3em .4em;
       font-size: 12px;
@@ -88,7 +88,7 @@ const createStyle = (theme, color) => {
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 0.41em;
     }
     #ecoindex-badge #badge span {
       background-color: ${color ? color : `#CCC`};
@@ -98,8 +98,8 @@ const createStyle = (theme, color) => {
           : `#FFF`
       };
       border-radius: 50%;
-      width: 16px;
-      height: 16px;
+      width: 1.33em;
+      height: 1.33em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -114,7 +114,7 @@ const createStyle = (theme, color) => {
       cursor: pointer;
     }
     #ecoindex-badge #badge span.undefined span {
-      color: #000;
+      color: #808080;
     }
     #ecoindex-badge #badge span.undefined span.cta,
     #ecoindex-badge #badge span.undefined span.alert {
@@ -141,7 +141,6 @@ const displayBadge = () => {
   resetResultBadge();
   const baseUrl = `https://bff.ecoindex.fr`;
   const url = window.location.href;
-  // const url = `htts://novagaia.fr/`;
   const badge = document.getElementById(`ecoindex-badge`);
   const theme = badge.getAttribute(`data-ecoindex-theme`) ?? `light`;
   fetch(`${baseUrl}/api/results/?url=${url}`, { method: `GET` })
