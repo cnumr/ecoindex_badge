@@ -1,4 +1,18 @@
-const createBadge = (theme, baseUrl, url, hasResult) => {
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="index.html"></script>
+  </head>
+  <body>
+    <div id="ecoindex-badge" data-ecoindex-theme="dark"></div>
+  </body>
+  <script>
+    const createBadge = (theme, baseUrl, url, hasResult) => {
       let badgeElement = undefined;
       if (hasResult) {
         badgeElement = document.createElement(`a`);
@@ -31,22 +45,38 @@ const createBadge = (theme, baseUrl, url, hasResult) => {
         gradeElement.appendChild(gradeQElement);
         gradeElement.setAttribute('id', `bt`);
         gradeElement.addEventListener(`click`, (event) => {
-          fetch(`${baseUrl}/api/tasks`, {
-            method: `POST`,
-            body: {
-              url: url,
-              width: 1920,
-              height: 1080,
-            },
-          })
-            .then((response) => {
-              if (response.ok) {
-                displayBadge();
-              } else {
-                console.error(`fetch error`);
-              }
+          event.preventDefault();
+          if (
+            event.pointerType === `touch` &&
+            event.srcElement.getAttribute(`class`) === `cta`
+          ) {
+            if (event.srcElement.getAttribute(`data-link-opened`) !== `true`) {
+              event.srcElement.setAttribute(`data-link-opened`, `true`);
+              return null;
+            }
+          }
+          if (
+            event.pointerType !== `touch` ||
+            (event.pointerType === `touch` &&
+              event.srcElement.getAttribute(`data-link-opened`) === `true`)
+          ) {
+            fetch(`${baseUrl}/api/tasks`, {
+              method: `POST`,
+              body: {
+                url: url,
+                width: 1920,
+                height: 1080,
+              },
             })
-            .catch(console.error);
+              .then((response) => {
+                if (response.ok) {
+                  displayBadge();
+                } else {
+                  console.error(`fetch error`);
+                }
+              })
+              .catch(console.error);
+          }
         });
       } else {
         gradeElement.setAttribute(`aria-label`, `Note ecoindex`);
@@ -153,3 +183,5 @@ const createBadge = (theme, baseUrl, url, hasResult) => {
         .catch(console.error);
     };
     displayBadge();
+  </script>
+</html>
