@@ -17,7 +17,7 @@ const createBadge = (theme, baseUrl, url, hasResult) => {
 const createGrade = (grade, baseUrl, url) => {
   const gradeElement = document.createElement(`span`);
   if (grade === undefined) {
-    gradeElement.setAttribute(`aria-label`, `Note inconnue`);
+    gradeElement.setAttribute(`aria-label`, `Site pas encore noté`);
     gradeElement.setAttribute(`class`, `undefined`);
     const gradeQElement = document.createElement(`span`);
     gradeQElement.setAttribute(`class`, `alert`);
