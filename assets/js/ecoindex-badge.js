@@ -1,3 +1,9 @@
+/**
+ * Méthode servant à créer le badge de résultat de mesure.
+ * @param {String} baseUrl Url du serveur d'API.
+ * @param {String} url Url de la page testée.
+ * @param {Boolean} hasResult indique si la requête a réussi et qu'il y a un résultat.
+ */
 const createBadge = (baseUrl, url, hasResult) => {
   let badgeElement = undefined;
   if (hasResult) {
@@ -14,6 +20,12 @@ const createBadge = (baseUrl, url, hasResult) => {
   badgeElement.append(`Ecoindex`);
   return badgeElement;
 };
+/**
+ * Methode servant à afficher la note ou des actions/informations pour déclancher une mesure.
+ * @param {String} grade Note obtenu par l'API
+ * @param {String} baseUrl Url du serveur d'API.
+ * @param {String} url Url de la page testée.
+ */
 const createGrade = (grade, baseUrl, url) => {
   const gradeElement = document.createElement(`span`);
   if (grade === undefined) {
@@ -21,6 +33,10 @@ const createGrade = (grade, baseUrl, url) => {
     const waitElement = document.createElement(`span`);
     waitElement.setAttribute(`class`, `wait`);
     waitElement.append(`Mesure en cours...`);
+    /**
+     * Sub Méthode servant à lancer la demande de mesure.
+     * @param {HTMLElement} gradeElement Composant HTML encapsulant les actions/informations possibles.
+     */
     const launchMesure = (gradeElement) => {
       gradeElement.replaceChildren(waitElement);
       fetch(`${baseUrl}/api/tasks`, {
@@ -50,6 +66,10 @@ const createGrade = (grade, baseUrl, url) => {
         })
         .catch(console.error);
     };
+    /**
+     * Sub Méthode servant à dléncher l'actualisation du badge si la mesure est terminée ou informant que le nombre de mesures à été atteint.
+     * @param {HTMLElement} gradeElement Composant HTML encapsulant les actions/informations possibles.
+     */
     const getMesureResult = (data) => {
       fetch(`${baseUrl}/api/tasks/${data}`, {
         method: `GET`,
@@ -104,6 +124,12 @@ const createGrade = (grade, baseUrl, url) => {
   }
   return gradeElement;
 };
+/**
+ * Méthode servant à générer le design du badge et ses enfants/alternatives.
+ * @param {string} baseUrl
+ * @param {string} url
+ *
+ */
 const createStyle = (theme, color) => {
   const styleElement = document.createElement(`style`);
   styleElement.append(`
@@ -177,10 +203,16 @@ const createStyle = (theme, color) => {
   `);
   return styleElement;
 };
+/**
+ * Méthode servant à reset le badge.
+ */
 const resetResultBadge = () => {
   const innerBadge = document.getElementById(`badge`);
   if (innerBadge) innerBadge.remove();
 };
+/**
+ * Méthode appelée lorsque le script se charge. Il ajoute à la balise div#ecoindex-badge le badge de ecoindex.
+ */
 const displayBadge = () => {
   resetResultBadge();
   const baseUrl = `https://bff.ecoindex.fr`;
