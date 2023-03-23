@@ -43,6 +43,16 @@ Vous pouvez utiliser la version statique du badge en utilisant le snippet suivan
 </a>
 ```
 
+## À propos du cache
+
+Le badge utilise un cache de 7 jours à 2 niveaux:
+- Au niveau [serveur](https://github.com/cnumr/ecoindex_bff#about-caching)
+- Au niveau local
+
+> **Bon à savoir:** 
+> - On peut **forcer le refresh du cache serveur** en utilisant le [plugin ecoindex](https://github.com/cnumr/ecoindex-browser-plugin). Lorsque l'on clique sur le bouton du plugin pour afficher le détail du résultat, on force une mise à jour du cache serveur.
+> - On peut **forcer la mise à jour du cache local** en rechargeant la page avec `ctrl+maj+R`
+
 ## Pour contribuer
 
 Vous pouvez contribuer à ce projet en proposant des améliorations ou en signalant des bugs. Pour cela, vous pouvez utiliser les fonctionnalités de GitHub. Retrouvez plus d'infos sur la page [Contribuer](CONTRIBUTING.md).
