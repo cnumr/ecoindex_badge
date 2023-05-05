@@ -6,13 +6,13 @@
     const a = document.createElement("a");
     const img = document.createElement("img");
 
-    a.href = `${baseUrl}/redirect/?url=${url}`; 
-    a.target = "_blank";
-    a.title = "Analyse ecoindex";
-    img.src = `${baseUrl}/badge/?theme=${theme}&url=${url}`;
-    img.alt = "Badge ecoindex";
-    img.width = "108px";
-    img.height = "32px";
+    a.setAttribute("href", `${baseUrl}/redirect/?url=${url}`);
+    a.setAttribute("target","_blank");
+    a.setAttribute("title",  "Analyse ecoindex");
+    img.setAttribute("src", `${baseUrl}/badge/?theme=${theme}&url=${url}`);
+    img.setAttribute("alt", "Badge ecoindex");
+    img.setAttribute("width", "108px");
+    img.setAttribute("height", "32px");
     a.appendChild(img);
     badge.appendChild(a);
 })();
