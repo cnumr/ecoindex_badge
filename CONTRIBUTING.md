@@ -18,10 +18,10 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 
 1. Fork the repo and create your branch from `master`.
 2. If you've added code that should be tested, add tests.
-4. Sources are in the `src` directory. to generate the minifier file, run `npm run buld`
-5. Ensure the test suite passes.
-6. Make sure your code lints.
-7. Issue that pull request!
+3. Sources are in the `src` directory. to generate the minifier file, run `npm run build`
+4. Ensure the test suite passes.
+5. Make sure your code lints.
+6. Issue that pull request!
 
 ## Any contributions you make will be under the MIT Software License
 
