@@ -2,6 +2,9 @@
     const baseUrl = "https://bff.ecoindex.fr";
     const url = window.location.href;
     const badge = document.getElementById("ecoindex-badge");
+    if (!badge) {
+        return;
+    }
     const theme = badge.getAttribute("data-theme") ?? "light";
     const a = document.createElement("a");
     const img = document.createElement("img");
