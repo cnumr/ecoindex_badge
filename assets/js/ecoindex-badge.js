@@ -11,8 +11,8 @@
     a.title = "Analyse ecoindex";
     img.src = `${baseUrl}/badge/?theme=${theme}&url=${url}`;
     img.alt = "Badge ecoindex";
-    img.setAttribute('width', "108px");
-    img.setAttribute('height', "32px");
+    img.setAttribute("width", "108px");
+    img.setAttribute("height", "32px");
     a.appendChild(img);
     badge.appendChild(a);
 })();
