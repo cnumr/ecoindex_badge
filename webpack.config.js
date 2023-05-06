@@ -4,6 +4,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   resolve: {
@@ -31,6 +32,12 @@ module.exports = {
         test: /\.ts/,
         exclude: /(node_modules)/,
         use: ['ts-loader'],
+      },
+      {
+        test: /\.ts/,
+        use: {
+          loader: 'prettier-loader',
+        }
       }
     ],
   },
@@ -56,6 +63,9 @@ module.exports = {
       threshold: 10240,
       minRatio: 0.8,
       deleteOriginalAssets: false
+    }),
+    new ESLintPlugin({
+      extensions: ['ts']
     }),
   ],
   optimization: {
