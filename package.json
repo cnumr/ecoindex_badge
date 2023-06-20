@@ -27,7 +27,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-webpack-plugin": "^4.0.1",
-    "image-minimizer-webpack-plugin": "^3.8.2",
+    "image-minimizer-webpack-plugin": "^3.8.3",
     "imagemin": "^8.0.1",
     "imagemin-svgo": "^10.0.1",
     "prettier": "^2.8.8",
