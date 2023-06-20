@@ -1,0 +1,20 @@
+name: "Check Ecoindex Badge quality"
+on:
+  pull_request:
+
+jobs:
+  lint:
+    name: "✅ Quality check"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "🚀 Checkout code"
+        uses: actions/checkout@v3
+
+      - name: "👷 Install dependencies"
+        run: npm install
+
+      - name: "🚨 Lint source code"
+        run: npm run lint
+
+#      - name: "🐛 Run tests"
+#        run: npm run test

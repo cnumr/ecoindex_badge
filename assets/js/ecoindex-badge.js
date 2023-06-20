@@ -1,18 +1,1 @@
-(function(){
-    const baseUrl = "https://bff.ecoindex.fr";
-    const url = window.location.href;
-    const badge = document.getElementById("ecoindex-badge");
-    const theme = badge.getAttribute("data-theme") ?? "light";
-    const a = document.createElement("a");
-    const img = document.createElement("img");
-
-    a.setAttribute("href", `${baseUrl}/redirect/?url=${url}`);
-    a.setAttribute("target","_blank");
-    a.setAttribute("title",  "Analyse ecoindex");
-    img.setAttribute("src", `${baseUrl}/badge/?theme=${theme}&url=${url}`);
-    img.setAttribute("alt", "Badge ecoindex");
-    img.setAttribute("width", "108px");
-    img.setAttribute("height", "32px");
-    a.appendChild(img);
-    badge.appendChild(a);
-})();
+(()=>{"use strict";!function(){var t;const e="https://bff.ecoindex.fr",i=window.location.href,r=document.getElementById("ecoindex-badge");if(!r)return;const n=null!==(t=r.getAttribute("data-theme"))&&void 0!==t?t:"light",d=document.createElement("a"),u=document.createElement("img");d.setAttribute("href",`${e}/redirect/?url=${i}`),d.setAttribute("target","_blank"),d.setAttribute("title","Analyse ecoindex"),u.setAttribute("src",`${e}/badge/?theme=${n}&url=${i}`),u.setAttribute("alt","Badge ecoindex"),u.setAttribute("width","108px"),u.setAttribute("height","32px"),d.appendChild(u),r.appendChild(d)}()})();
