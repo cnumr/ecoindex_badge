@@ -33,12 +33,6 @@ module.exports = {
         exclude: /(node_modules)/,
         use: ['ts-loader'],
       },
-      // {
-      //   test: /\.ts/,
-      //   use: {
-      //     loader: 'prettier-loader',
-      //   }
-      // }
     ],
   },
   plugins: [

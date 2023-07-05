@@ -36,7 +36,7 @@ const createBadgeLink = (
 };
 
 /**
- * Methode servant à afficher la note ou des actions/informations pour déclancher une mesure.
+ * Methode servant à afficher la note ou des actions/informations pour déclencher une mesure.
  * @param {String} grade Note obtenu par l'API
  */
 const createGrade = (grade: string) => {
@@ -91,18 +91,6 @@ const createStyle = (gradeColor: string): HTMLStyleElement => {
     styleElement.append(style);
     return styleElement;
 };
-//
-// /**
-//  * Méthode servant à reset le badge.
-//  */
-// const resetResultBadge = (): void => {
-//     const innerBadge: HTMLElement | null = document.getElementById(
-//         'ecoindex-badge-link'
-//     );
-//     if (innerBadge) {
-//         innerBadge.remove();
-//     }
-// };
 
 /**
  * Méthode appelée lorsque le script se charge. Il ajoute à la balise div#ecoindex-badge le badge de ecoindex.
@@ -113,7 +101,6 @@ const displayBadge = (): void => {
     }
 
     badge.style.display = 'none';
-    // resetResultBadge();
     const LinkHref = `${baseUrl}/redirect/?url=${currentUrl}`;
     const title = 'Résultat analyse écoIndex : ';
     const ariaLabel = 'badge écoIndex : ';
