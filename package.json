@@ -32,7 +32,7 @@
     "imagemin-svgo": "^10.0.1",
     "prettier": "^2.8.8",
     "prettier-loader": "^3.3.0",
-    "terser-webpack-plugin": "^5.3.7",
+    "terser-webpack-plugin": "^5.3.9",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
     "webpack": "^5.79.0",
