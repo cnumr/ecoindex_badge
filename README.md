@@ -8,20 +8,20 @@ Ce projet a pour but de proposer un badge à intégrer à vos pages web facileme
 
 La version la plus simple est de copier-coller le code suivant dans votre page web :
 
-![Ecoindex Badge](https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@2/assets/svg/light/A.svg)
+![Ecoindex Badge](https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@2.2/assets/svg/light/A.svg)
 
 ```html
 <div id="ecoindex-badge"></div>
-<script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@2/assets/js/ecoindex-badge.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></script>
 ```
 
 Il existe une variante pour les thèmes sombres :
 
-![Ecoindex Badge](https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@2/assets/svg/dark/A.svg)
+![Ecoindex Badge](https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@2.2/assets/svg/dark/A.svg)
 
 ```html
 <div id="ecoindex-badge" data-theme="dark"></div>
-<script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@2/assets/js/ecoindex-badge.js" defer></script>
+<script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></script>
 ```
 
 Cette version est optimisée et permet de ne pas surcharger votre page web avec des scripts inutiles. :
