@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "^7.23.0",
+    "@babel/cli": "^7.23.9",
     "@babel/core": "^7.23.2",
     "@babel/preset-env": "^7.23.2",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
