@@ -1,6 +1,6 @@
 {
   "name": "ecoindexbadge",
-  "version": "3.0.0",
+  "version": "3.0.1-0",
   "description": "[![](https://data.jsdelivr.com/v1/package/gh/cnumr/ecoindex_badge/badge)](https://www.jsdelivr.com/package/gh/cnumr/ecoindex_badge)",
   "main": "index.js",
   "scripts": {
