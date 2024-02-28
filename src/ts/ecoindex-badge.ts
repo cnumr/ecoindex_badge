@@ -5,7 +5,7 @@ interface ApiResponseInterface {
     };
 }
 
-const baseUrl = 'https://bff.ecoindex.fr';
+const baseUrl = 'https://test.lebondeveloppeur.fr';
 const badge: HTMLElement | null = document.getElementById('ecoindex-badge');
 const LightTheme = 'light';
 const isLightTheme: boolean =
