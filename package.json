@@ -28,7 +28,7 @@
     "eslint-webpack-plugin": "^4.0.1",
     "prettier": "^2.8.8",
     "prettier-loader": "^3.3.0",
-    "terser-webpack-plugin": "^5.3.7",
+    "terser-webpack-plugin": "^5.3.10",
     "ts-loader": "^9.5.0",
     "typescript": "^5.0.4",
     "webpack": "^5.89.0",
